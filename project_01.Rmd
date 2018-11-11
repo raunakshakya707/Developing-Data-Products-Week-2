@@ -1,0 +1,22 @@
+---
+title: 'Developing Data Products - Week 2 Peer-graded Assignment'
+author: "Raunak Shakya"
+date: "November 11, 2018"
+output: html_document
+---
+
+<br/>
+
+#### **Overview**
+
+In this assignment, I have created a web page using R Markdown that features a map created with Leaflet and host my webpage on GitHub Pages. The webpage contains the date that I created the document, anda map created with Leaflet.
+
+```{r}
+library(leaflet)
+map <- leaflet() %>% addTiles() 
+map <- map %>% 
+  addMarkers(lat=27.71068, lng= 85.3062413, popup="My House") %>%
+  addMarkers(lat=27.720908,lng=85.316656, popup="British Council, Kathmandu") %>%
+  addMarkers(lat=27.680955,lng=85.318763, popup="IOE Pulchowk, Patan")
+map
+```
